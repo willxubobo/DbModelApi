@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbModelApi", "DbModelApi\DbModelApi.csproj", "{BB2EB5BC-D550-4D2E-A5AA-A1BF7E7C300E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbModelApi.Model", "DbModelApi.Model\DbModelApi.Model.csproj", "{93FBAC62-E499-434C-A138-8FC147C6A257}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{BB2EB5BC-D550-4D2E-A5AA-A1BF7E7C300E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB2EB5BC-D550-4D2E-A5AA-A1BF7E7C300E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB2EB5BC-D550-4D2E-A5AA-A1BF7E7C300E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93FBAC62-E499-434C-A138-8FC147C6A257}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93FBAC62-E499-434C-A138-8FC147C6A257}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93FBAC62-E499-434C-A138-8FC147C6A257}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93FBAC62-E499-434C-A138-8FC147C6A257}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
