@@ -1,0 +1,334 @@
+﻿body {
+}
+
+.alertBg {
+	padding: 20px;
+	border-radius: 10px;
+	background: url(../images/alertbg.png);
+}
+
+.alertTxt {
+	color: #fff;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: center;
+}
+
+.alertBox {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: none;
+}
+
+.add-top-new {
+	position: absolute;
+	right: 50px;
+	cursor: pointer;
+	margin-top: -20px;
+}
+
+.search {
+	width: 98%;
+	border: 1px solid #e0e0e0;
+	display: inline-block;
+	color: #64728f;
+	margin-top: 5px;
+}
+
+.left-search {
+	float: left;
+	line-height: 30px;
+	width: 80%;
+	margin: 15px;
+}
+
+.right-search {
+	float: right;
+	height: 120px;
+	background-color: #EDEDED;
+	padding: 26px;
+}
+
+.sa-btn {
+	z-index: 2;
+	display: block;
+	width: 90px;
+	height: 27px;
+	text-align: center;
+	line-height: 27px;
+	color: #fff;
+}
+
+/*************************************************************Sachiel Add Started*************************************************************************/
+#divAddAccount table, #divAddVirtualAccount table {
+	width: 90%;
+	margin: 10px auto;
+}
+
+#divAddAccount td input[type='text'], #divAddVirtualAccount td input[type='text'] {
+	width: 100%;
+	border: 1px #ccc solid;
+	text-indent: 5px;
+	height: 30px;
+}
+
+#divAddAccount td textarea {
+	width: 100%;
+	border: 1px #ccc solid;
+	vertical-align: text-top;
+	text-indent: 5px;
+}
+
+#divAddAccount td, #divAddVirtualAccount td {
+	padding: 5px 15px 5px 5px;
+}
+
+#divAddAccount tr:last-child, #divAddVirtualAccount tr:last-child {
+	text-align: center;
+}
+
+
+
+
+.layui-layer-shade {
+	z-index: 998 !important;
+}
+
+.layui-layer-page {
+	z-index: 999 !important;
+}
+
+.onlyForRead input[type='text'] {
+	border: none !important;
+}
+
+.onlyForRead textarea {
+	border: none !important;
+}
+
+.btn_save, .btn_cancel, .btn_update {
+	cursor: pointer;
+}
+
+#divFinanceScheme table {
+	margin-top: 5px;
+	float: left;
+}
+
+#divFinanceScheme input.base-date {
+	width: 131px !important;
+}
+
+#divFinanceScheme table td {
+	height: 30px;
+}
+
+#divFinanceScheme td input[type='text'] {
+	width: 100%;
+	border: 1px #ccc solid;
+	text-indent: 5px;
+	height: 30px;
+}
+
+#divFinanceScheme > table tr:last-child {
+	text-align: center;
+}
+
+#divFinanceScheme input[type='checkbox'] {
+	border: 1px #ccc solid;
+	width: 15px;
+	height: 15px;
+}
+
+#divFinanceScheme > table tr .checkbox {
+	width: 15px !important;
+}
+
+
+#tblFinanceSchemeSearch {
+	width: 830px;
+}
+
+#divAddWindow table.searchTable {
+	width: 820px;
+	margin-top: 5px;
+	float: left;
+}
+
+
+#divAddWindow table.searchContentTable {
+	width: 98%;
+	margin: 5px auto;
+}
+
+#divAddWindow > #divSearch {
+	border: 1px solid #e0e0e0;
+	width: 98%;
+	margin: 2px auto;
+}
+
+
+#divSearch > table > tbody tr:first-child > td:nth-child(odd) {
+	width: 15%;
+	padding-left: 15px;
+}
+
+#divSearch > table > tbody tr:last-child > td {
+	padding-left: 20px;
+}
+
+
+.selectTableList {
+	font-size: 12px !important;
+	margin-top: 0px !important;
+}
+
+	.selectTableList div.checkbox {
+		margin-top: 3px !important;
+		margin-bottom: 3px !important;
+	}
+
+	.selectTableList tbody tr td {
+		padding-top: 2px !important;
+		padding-bottom: 2px !important;
+	}
+
+
+	.selectTableList input.magic-checkbox:checked + label:before {
+		background: url(../images/select1.png) no-repeat 0px 0px;
+		background-size: 14px 14px !important;
+	}
+
+	.selectTableList input.magic-checkbox + label:hover:before {
+		/*background: url(../images/select2.png) no-repeat 0px 0px;*/
+		background-size: 14px 14px !important;
+	}
+
+	.selectTableList input.magic-radio + label:before, .selectTableList input.magic-checkbox + label:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: inline-block;
+		width: 14px !important;
+		height: 14px !important;
+		content: '';
+		background: url(../images/select2.png) no-repeat 0px 0px;
+		background-size: 14px 14px !important;
+		margin-top: 3px;
+	}
+
+.propForm ul.pagination {
+	margin: 0 !important;
+}
+
+	.propForm ul.pagination > li {
+		width: 25px !important;
+		height: 25px !important;
+	}
+
+		.propForm ul.pagination > li > a {
+			padding-top: 0px !important;
+			padding-bottom: 0px !important;
+			padding-left: 8px !important;
+		}
+
+.propForm #txtStartTime {
+	width: 160px;
+}
+
+.propForm #txtEndTime {
+	width: 160px;
+}
+
+.selectTableList thead tr th {
+	padding-top: 0px !important;
+}
+
+.readlblStyle {
+	padding-left: 5px;
+}
+
+#divSelectAccount {
+	width: 98%;
+	margin: 20px auto;
+}
+
+
+#tableReportSearch input[type='text'] {
+    /*width: 98%;*/
+}
+
+#tableReportSearch input.base-date {
+    width: 46.5% !important;
+}
+/*************************************************************Sachiel End Started*************************************************************************/
+
+/*************************************************************will Add Started*************************************************************************/
+.btn-upload-w {
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border: 1px #ccc solid;
+	/* display: inline-block; */
+	margin-left: 30px;
+	position: static;
+	color: #666;
+	border-radius: 5px;
+	width: 101px;
+}
+
+.this-content .content-table2 thead tr th {
+	border-bottom: 1px #ccc solid;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.busstd {
+	width: 7% !important;
+}
+
+.bussinput {
+	width: 50% !important;
+}
+/*************************************************************will End Started*************************************************************************/
+
+.nav-list > li.selected {
+	border-bottom: 4px solid #6bcfff;
+}
+
+.loadingBox {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.4);
+}
+
+.loadPic {
+	width: 270px;
+}
+
+	.loadPic img {
+		width: 100%;
+		height: 100%;
+	}
+
+.costDes {
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+table.dataTable .checkbox
+{
+    margin:0;
+}

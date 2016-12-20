@@ -1,13 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DbModelApi.Model
 {
+     [Table("TransferDetail")]
     public class TransferDetail
     {
+         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+         [Key]
         public System.Guid Id { get; set; }
         public Nullable<System.Guid> ApplyId { get; set; }
         public string InvoiceNo { get; set; }

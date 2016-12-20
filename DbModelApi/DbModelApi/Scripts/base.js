@@ -1,30 +1,30 @@
 ﻿$(document).ready(function () {
     minHeight();
-    userOperate();
-    navHover();
-    sideNav();
-    btnClick();
+    //userOperate();
+    //navHover();
+    //sideNav();
+    //btnClick();
 
-    InitFactor();
-    setMenuSelected();
-    initUserName();
+    //InitFactor();
+    //setMenuSelected();
+    //initUserName();
 
-    $(".nav-select").on("click", function (e) {
-        if ($(".sub-nav").is(":hidden")) {
-            $(".sub-nav").show();
-        } else {
-            $(".sub-nav").hide();
-        }
+    //$(".nav-select").on("click", function (e) {
+    //    if ($(".sub-nav").is(":hidden")) {
+    //        $(".sub-nav").show();
+    //    } else {
+    //        $(".sub-nav").hide();
+    //    }
 
-        $(document).one("click", function () {
-            $(".sub-nav").hide();
-        });
+    //    $(document).one("click", function () {
+    //        $(".sub-nav").hide();
+    //    });
 
-        e.stopPropagation();
-    });
-    $(".sub-nav").on("click", function (e) {
-        e.stopPropagation();
-    });
+    //    e.stopPropagation();
+    //});
+    //$(".sub-nav").on("click", function (e) {
+    //    e.stopPropagation();
+    //});
 });
 
 function initUserName() {
