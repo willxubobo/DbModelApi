@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Optimization;
 using System.Web.Routing;
+using DbModelApi.Filters;
 
 namespace DbModelApi
 {
@@ -28,7 +29,7 @@ namespace DbModelApi
                }
             );
 
-            //GlobalConfiguration.Configuration.Filters.Add(new WebApiExceptionFilterAttribute());
+            GlobalConfiguration.Configuration.Filters.Add(new WebApiExceptionFilterAttribute());
 
             GlobalConfiguration.Configuration.EnsureInitialized();
         }

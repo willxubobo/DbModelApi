@@ -93,6 +93,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\TransferController.cs" />
+    <Compile Include="Filters\WebApiExceptionFilterAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -111,6 +112,13 @@
     <Compile Include="Views\TransferManagement\List.aspx.designer.cs">
       <DependentUpon>List.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\TransferManagement\Maintain.aspx.cs">
+      <DependentUpon>Maintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\TransferManagement\Maintain.aspx.designer.cs">
+      <DependentUpon>Maintain.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\ace.min.css" />
@@ -118,6 +126,49 @@
     <Content Include="Content\custom.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="images\alertbg.png" />
+    <Content Include="images\arrow_1.png" />
+    <Content Include="images\arrow_2.png" />
+    <Content Include="images\arrow_3.png" />
+    <Content Include="images\arrow_4.png" />
+    <Content Include="images\bg.jpg" />
+    <Content Include="images\bg.png" />
+    <Content Include="images\btn_Export.png" />
+    <Content Include="images\close.png" />
+    <Content Include="images\content-bg.png" />
+    <Content Include="images\icon_1.png" />
+    <Content Include="images\icon_2.png" />
+    <Content Include="images\icon_3.png" />
+    <Content Include="images\icon_4.png" />
+    <Content Include="images\icon_5.png" />
+    <Content Include="images\icon_6.png" />
+    <Content Include="images\icon_8.png" />
+    <Content Include="images\icon_9.png" />
+    <Content Include="images\icon_banjie.png" />
+    <Content Include="images\icon_cancellation.png" />
+    <Content Include="images\icon_close.png" />
+    <Content Include="images\icon_delete.png" />
+    <Content Include="images\icon_error.png" />
+    <Content Include="images\icon_generate.png" />
+    <Content Include="images\icon_logout.png" />
+    <Content Include="images\icon_modify.png" />
+    <Content Include="images\icon_open.png" />
+    <Content Include="images\icon_send.png" />
+    <Content Include="images\icon_site.png" />
+    <Content Include="images\icon_time.png" />
+    <Content Include="images\icon_Upload.png" />
+    <Content Include="images\icon_upload1.png" />
+    <Content Include="images\icon_upload2.png" />
+    <Content Include="images\loading2.gif" />
+    <Content Include="images\login-bg.png" />
+    <Content Include="images\login-logo.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\next.png" />
+    <Content Include="images\prev.png" />
+    <Content Include="images\select1.png" />
+    <Content Include="images\select2.png" />
+    <Content Include="images\sub-nav-icon.png" />
+    <Content Include="images\welcome.png" />
     <Content Include="Scripts\ace.min.js" />
     <Content Include="Scripts\ajaxfileupload.js" />
     <Content Include="Scripts\angular-1.0.1.min.js" />
@@ -211,6 +262,7 @@
     <Content Include="Scripts\uploadify\uploadify.css" />
     <Content Include="Scripts\uploadify\uploadify.swf" />
     <Content Include="Views\TransferManagement\List.aspx" />
+    <Content Include="Views\TransferManagement\Maintain.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -221,7 +273,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Filters\" />
     <Folder Include="Models\" />
     <Folder Include="Providers\" />
     <Folder Include="Results\" />
