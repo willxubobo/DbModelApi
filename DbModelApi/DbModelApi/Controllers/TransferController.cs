@@ -52,7 +52,7 @@ namespace DbModelApi.Controllers
         public IHttpActionResult Post(TransferManagement transfer)
         {
             TransferManagementBLL com = new TransferManagementBLL();
-            transfer.ApplyId = new Guid(transfer.Attribute5);
+            transfer.ApplyId = Guid.NewGuid();
             transfer.Attribute5 = "";
             transfer.Created = DateTime.Now;
             //transfer.CreatedBy = CurrentUserInfo.ID;

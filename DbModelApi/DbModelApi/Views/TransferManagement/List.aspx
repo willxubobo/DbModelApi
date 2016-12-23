@@ -206,7 +206,7 @@
                 },
                 "aoColumns": [
                     {
-                        "mData": "UserName", "bSortable": false, "sType": 'chinese-string'
+                        "mData": "Topic", "bSortable": false, "sType": 'chinese-string'
                     },
                     {
                         "mData": "Topic", "bSortable": false, "sType": 'chinese-string',
@@ -216,7 +216,7 @@
                     },
                     
                     {
-                        "mData": "CompanyName", "bSortable": false, "sType": 'chinese-string'
+                        "mData": "Attribute6", "bSortable": false, "sType": 'chinese-string'
                     },
                     
                     {

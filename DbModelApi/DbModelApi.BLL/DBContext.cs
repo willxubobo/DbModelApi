@@ -10,10 +10,14 @@ namespace DbModelApi.BLL
 {
     public class DBContext : DbContext
     {
+        static DBContext()
+        {
+            Database.SetInitializer<DBContext>(null);
+        }
         public DBContext()
             : base("Name=DBContext")
         {
-            //this.Configuration.LazyLoadingEnabled = false;
+            this.Configuration.LazyLoadingEnabled = false;
         }
         public DbSet<TransferDetail> TransferDetails { get; set; }
         public DbSet<TransferManagement> TransferManagements { get; set; }

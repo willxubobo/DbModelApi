@@ -48,6 +48,8 @@ namespace DbModelApi.Model
         public string Attribute4 { get; set; }
         [StringLength(300)]
         public string Attribute5 { get; set; }
+        [StringLength(300)]
+        public string Attribute6 { get; set; }
         public virtual ICollection<TransferDetail> TransferDetails { get; set; }
     }
 }
