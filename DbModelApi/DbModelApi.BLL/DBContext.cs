@@ -21,5 +21,6 @@ namespace DbModelApi.BLL
         }
         public DbSet<TransferDetail> TransferDetails { get; set; }
         public DbSet<TransferManagement> TransferManagements { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

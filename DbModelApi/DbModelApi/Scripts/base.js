@@ -431,7 +431,7 @@ function ErrorResponse(obj, url) {
     if (typeof (obj) != "object") {
         if (obj.toLowerCase().indexOf("<title>401</title>") >= 0) {
             layer.alert("请重新登录！", function () {
-                window.location.href = "/pages/login.aspx";
+                window.location.href = "/Views/login.aspx";
             });
             return;
         }
@@ -476,7 +476,7 @@ function ErrorResponse(obj, url) {
         var locationUrl = window.location.href;
         if (errorMsg.length > 0) {
             var layindex = layer.alert(errorMsg, function () {
-                window.location.href = "/pages/login.aspx";
+                window.location.href = "/Views/login.aspx";
             });
         }
     }

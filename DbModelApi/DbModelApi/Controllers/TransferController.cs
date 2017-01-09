@@ -15,6 +15,7 @@ namespace DbModelApi.Controllers
     [RoutePrefix("api")]
     public class TransferController : BaseController
     {
+        //[Authorize]
         [HttpGet]
         [Route("transfers")]
         public IHttpActionResult Get()

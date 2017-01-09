@@ -192,12 +192,15 @@
                         "type": "GET",
                         "url": sSource,
                         "data": aoData,
-                        "success": function (data) {
+                        "success": function(data) {
                             var obj = getJsonData(data);
 
                             fnCallback(obj);
+                        },
+                        "error": function(data) {
+                            ErrorResponse(data);
                         }
-                    })
+                    });
                 },
                 "fnRowCallback": function (nRow, aData, iDisplayIndex) {
                     var index = $('#tabList').dataTable().fnSettings()._iDisplayStart + iDisplayIndex + 1;
