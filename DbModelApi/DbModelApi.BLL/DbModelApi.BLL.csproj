@@ -50,6 +50,7 @@
     <Compile Include="EmailLogBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TransferManagementBLL.cs" />
+    <Compile Include="UserBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DbModelApi.Model\DbModelApi.Model.csproj">

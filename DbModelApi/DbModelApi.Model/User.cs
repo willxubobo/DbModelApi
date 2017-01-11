@@ -8,9 +8,10 @@ using System.Threading.Tasks;
 
 namespace DbModelApi.Model
 {
+    [Table("User", Schema = "dbo")]
     public class User
     {
-       // [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public System.Guid UserId { get; set; }
 

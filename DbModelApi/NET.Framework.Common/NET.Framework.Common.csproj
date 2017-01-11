@@ -100,6 +100,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SerializerHelper\SerializerHelper.cs" />
+    <Compile Include="UtilityHelper\Utility.cs" />
     <Compile Include="ValidHelper\Validator.cs" />
     <Compile Include="ValidHelper\ValidManager.cs" />
   </ItemGroup>

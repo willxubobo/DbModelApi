@@ -8,6 +8,7 @@ using System.Text;
 using System.Web;
 using System.Web.Http;
 using System.Web.Script.Serialization;
+using DbModelApi.CustomAttributes;
 using DbModelApi.Filters;
 using DbModelApi.Model;
 using Newtonsoft.Json;
@@ -15,6 +16,8 @@ using RestSharp;
 
 namespace DbModelApi.Controllers
 {
+    [DeflateCompression]
+    [RoutePrefix("api/proxy")]
     public class UserController : BaseController
     {
         private readonly static string backendServiceEndPoint = ConfigurationManager.AppSettings["BackendServiceEndPoint"];
@@ -48,7 +51,7 @@ namespace DbModelApi.Controllers
             var request = new RestRequest(Method.POST);
             request.RequestFormat = DataFormat.Json;
 
-            string encodedBody = string.Format("grant_type=password&client_id=001&username={0}&password={1}&scope={2}", httpRequestBody["mobile"].Trim(), httpRequestBody["password"], scan);
+            string encodedBody = string.Format("grant_type=password&client_id=001&username={0}&password={1}&scope={2}", httpRequestBody["username"].Trim(), httpRequestBody["password"], scan);
             request.AddParameter("application/x-www-form-urlencoded", encodedBody, ParameterType.RequestBody);
             request.AddHeader("Content-Type", "application/x-www-form-urlencoded");
 

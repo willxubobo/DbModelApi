@@ -29,7 +29,6 @@ namespace DbModelApi.BLL
             List<TransferManagement> list = new List<TransferManagement>();
             using (DBContext db = new DBContext())
             {
-                var ulist = db.Users.AsQueryable();
                 var templist = db.TransferManagements.AsQueryable();
                 list = templist.OrderByDescending(d=>d.Created).ThenBy(d=>d.ApplyId).Skip(skip).Take(take).ToList();
                 count = templist.Count();
