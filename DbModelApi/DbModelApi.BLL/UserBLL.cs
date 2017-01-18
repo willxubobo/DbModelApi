@@ -15,7 +15,6 @@ namespace DbModelApi.BLL
             User user = new User();
             using (DBContext db = new DBContext())
             {
-                var users = db.Users.AsQueryable();
                 user = db.Users.FirstOrDefault(p => p.UserName==uname&&p.Pwd==pwd);
                 
             }

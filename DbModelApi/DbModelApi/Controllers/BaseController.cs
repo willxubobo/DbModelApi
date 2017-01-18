@@ -5,6 +5,8 @@ using System.Net;
 using System.Net.Http;
 using System.Web;
 using System.Web.Http;
+using DbModelApi.Model;
+using NET.Framework.Common.CacheHelper;
 
 namespace DbModelApi.Controllers
 {
@@ -30,5 +32,23 @@ namespace DbModelApi.Controllers
             }
 
         }
+
+        //用来保存当前的用户信息
+        public User LoginUser { get { return CurrentUser(); } }
+
+        public User CurrentUser()
+        {
+            User user = new User();
+            string sessionId = HttpContext.Current.Request["sessionId"];
+            if (!string.IsNullOrEmpty(sessionId))
+            {
+                if (MemcachedCache.Get<User>(sessionId) != null)
+                {
+                    user = MemcachedCache.Get<User>(sessionId);
+                }
+            }
+            return user;
+        }
+        
     }
 }

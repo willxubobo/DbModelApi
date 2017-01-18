@@ -11,7 +11,7 @@ namespace NET.Framework.Common.CacheHelper
     public class MemcachedCache
     {
         private const string NullKeyNotAllowed = "null key not allowed";
-        private static TimeSpan _expiration = new TimeSpan(10, 0, 0, 0, 0);
+        private static TimeSpan _expiration = new TimeSpan(0, 0, 30, 0, 0);
         private static MemcachedClient _mc=new MemcachedClient();
 
         //public MemcachedCache()

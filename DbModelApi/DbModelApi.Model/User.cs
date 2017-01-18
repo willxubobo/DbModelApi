@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace DbModelApi.Model
 {
+    [Serializable]
     [Table("User", Schema = "dbo")]
     public class User
     {

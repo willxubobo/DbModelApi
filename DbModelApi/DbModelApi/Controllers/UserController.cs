@@ -12,6 +12,7 @@ using DbModelApi.CustomAttributes;
 using DbModelApi.Filters;
 using DbModelApi.Model;
 using Newtonsoft.Json;
+using NET.Framework.Common.CacheHelper;
 using RestSharp;
 
 namespace DbModelApi.Controllers
@@ -64,19 +65,38 @@ namespace DbModelApi.Controllers
                 return HandleErrorMessage(HttpStatusCode.BadRequest, "用户名或密码错误！");
             }
 
-            RequestToken = authToken.Access_Token;
+            //RequestToken = authToken.Access_Token;
             User user = new User().ConvertUser(authToken);
-            CurrentUser = user;
+            //CurrentUser = user;
+            string sessionId = Guid.NewGuid().ToString();
+            //把sessionid写到客户端浏览器里面去了（一定要把sessionid写到客户端，这样用户在访问其他web资源的时候，就会把cookie中的信息传给服务器，然后通过sessionid的key到Memcached中去取对应的值）
+            HttpContext.Current.Response.Cookies["sessionId"].Value = sessionId;
+            RequestToken = authToken.Access_Token;
 
+            if (MemcachedCache.Get<User>(sessionId) == null)
+            {
+                MemcachedCache.Put<User>(sessionId, user);
+            }
             return Ok(user);
+        }
+
+        [HttpGet]
+        [Route("currentuser")]
+        public User GetCurrentUser()
+        {
+            if (LoginUser != null)
+            {
+                return LoginUser;
+            }
+            return null;
         }
 
         private IHttpActionResult HandleErrorMessage(HttpStatusCode httpStatusCode, string errorMessage)
         {
             if (errorMessage.ToLower().Contains("authorization") || httpStatusCode == HttpStatusCode.Unauthorized)
             {
-                CurrentUser = null;
-                RequestToken = null;
+               // CurrentUser = null;
+                //RequestToken = null;
                 httpStatusCode = HttpStatusCode.Unauthorized;
             }
             //如果包含 { 字符，约定已经是后台传回来的JSON格式的错误消息
@@ -88,16 +108,16 @@ namespace DbModelApi.Controllers
             return new System.Web.Http.Results.ResponseMessageResult(httpResponseMessage);
         }
 
-        private User CurrentUser
-        {
-            set { HttpContext.Current.Session["CurrentUser"] = value; }
-            get { return HttpContext.Current.Session["CurrentUser"] as User; }
-        }
+        //private User CurrentUser
+        //{
+        //    set { HttpContext.Current.Session["CurrentUser"] = value; }
+        //    get { return HttpContext.Current.Session["CurrentUser"] as User; }
+        //}
 
         private string RequestToken
         {
-            set { HttpContext.Current.Session["UserRequestToken"] = value; }
-            get { return HttpContext.Current.Session["UserRequestToken"] as string; }
+            set { HttpContext.Current.Response.Cookies["authToken"].Value = value; }
+            get { return HttpContext.Current.Request["authToken"]; }
         }
     }
 }

@@ -65,17 +65,17 @@
                 url: "/api/proxy/auth",
                 data: parameterJson,
                 success: function (result) {
-                    alert("succ");
-                    //$.ajax({
-                    //    type: "get",
-                    //    dataType: 'json',
-                    //    contentType: "application/json; charset=utf-8",
-                    //    url: "/api/proxy/currentuser",
-                    //    success: function (result) {
+                   // alert("succ");
+                    $.ajax({
+                        type: "get",
+                        dataType: 'json',
+                        contentType: "application/json; charset=utf-8",
+                        url: "/api/proxy/currentuser",
+                        success: function (result) {
+                            alert(result.userName);
 
-
-                    //    }
-                    //});
+                        }
+                    });
                 },
                 error: function (err) {
                     ErrorResponse(err);
